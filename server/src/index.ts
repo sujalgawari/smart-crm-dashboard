@@ -14,13 +14,13 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "*",
+    origin: true,
     credentials: true,
   })
 );
 
 app.get("/", (req, res) => {
-  res.send("API Running");
+  res.send("API Running 🚀");
 });
 
 app.use("/api/auth", authRoutes);
